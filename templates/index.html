@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meme Generator 😄</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div>
+            <label>Upload image:</label><br>
+            <input type="file" name="image" accept="image/*" required>
+        </div>
+
+        <div>
+            <label>Top text:</label><br>
+            <input type="text" name="top_text" placeholder="WHEN YOU FINALLY UNDERSTAND DOCKER">
+        </div>
+
+        <div>
+            <label>Bottom text:</label><br>
+            <input type="text" name="bottom_text" placeholder="BUT THE DEADLINE IS TOMORROW">
+        </div>
+
+        <button type="submit">Generate meme</button>
+    </form>
+
+    {% if meme_url %}
+        <h2>Your ultra funny meme:</h2>
+        <img src="{{ meme_url }}" alt="Generated meme" style="max-width:100%;">
+    {% endif %}
+</body>
+</html>
