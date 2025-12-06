@@ -15,7 +15,7 @@ The user can:
 - **Language**: Python 3
 - **Web framework**: Flask
 - **Image processing**: Pillow
-- **Containerization**: Docker (optionally docker-compose)
+- **Containerization**: Docker
 
 ---
 
