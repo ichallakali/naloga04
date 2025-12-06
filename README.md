@@ -28,6 +28,11 @@ The user can:
 
 ---
 
+Docker run commands
+```bash
+docker build -t meme-generator .
+docker run -p 5000:5000 meme-generator
+```
 ## Running locally (without Docker)
 
 ```bash
@@ -37,8 +42,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 python app.py
 
-Docker run commands
-
-docker build -t meme-generator .
-docker run -p 5000:5000 meme-generator
 
